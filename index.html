@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            background-color: white;
+            margin-top: 20px;
+            position: sticky;
+            top: 0;
+            /* z-index: -1; */
+        }
+
+        nav h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 450px;
+            margin-left: 50px;
+        }
+
+        ul li {
+            float: left;
+            margin-top: 10px;
+            list-style-type: none;
+        }
+
+        ul li a {
+
+            text-decoration: none;
+            padding: 20px;
+            font-weight: bold;
+            color: black;
+            margin-right: 30px;
+        }
+
+        ul li a:hover {
+            color: orangered;
+        }
+
+        .banner_1 {
+            background-image: url(./images/banner-01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 700px;
+            background-position: fixed;
+            position: relative;
+            z-index: -1;
+        }
+
+        .banner_1 h1 {
+            color: white;
+            padding: 200px;
+        }
+
+        .banner_1_loc {
+            background-color: white;
+            padding: 3px;
+
+            position: absolute;
+            top: 130px;
+            left: 200px;
+        }
+
+        .featured {
+            margin: 100px;
+        }
+
+        .secondary {
+            background-color: rgb(240, 233, 233);
+            border-radius: 10px;
+        }
+
+        .features {
+            border-radius: 15px;
+            padding: 20px;
+            margin: 0 40px;
+        }
+
+        .features p {
+            color: grey;
+        }
+
+        .features h4 {
+            font-weight: bold
+        }
+
+        .video_view {
+            background-image: url(./images/video-bg.jpg);
+            background-size: cover;
+            height: 500px;
+            background-position: fixed;
+            position: relative;
+            z-index: -1;
+            text-align: center;
+        }
+
+        .property_cards h5 {
+            font-weight: bold;
+        }
+
+        .property_cards a {
+            border-radius: 50px;
+        }
+
+        .contact_us {
+            background-image: url(./images/contact-bg.jpg);
+            background-size: cover;
+            height: 400px;
+            background-position: fixed;
+            position: relative;
+            z-index: -1;
+
+            margin-top: 100px;
+
+        }
+
+        form {
+            padding: 15px;
+            border-radius: 10px;
+            /* height: 300px; */
+        }
+
+        .input_decor {
+            background-color: rgb(244, 240, 240);
+            border: none;
+            border-radius: 20px;
+        }
+
+        .send_msg {
+            border-radius: 30px;
+            background-color: black;
+            padding: 5px 12px;
+            color: white;
+        }
+        .contact_details_1{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header class="d-flex ">
+        <div>
+        <img src="./images/email-icon.png" alt="email-icon"><span>info@company.com</span>
+        <img src="./images/email-icon.png" alt=""><span>Sunny Isles Beach, FL 33160</span>
+    </div>
+        <div class="d-flex">
+            <div> <i class="fa-brands fa-facebook"></i></div>
+           
+           <div><i class="fa-brands fa-twitter"></i></div> 
+            <div><i class="fa-brands fa-linkedin"></i></div>
+            <div><i class="fa-brands fa-instagram"></i></div>
+        </div>
+    </header> -->
+    <nav>
+        <h1>VILLA</h1>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Properties</a></li>
+            <li><a href="">Property Details</a></li>
+            <li><a href="">Contact US</a></li>
+
+            <div style="display: flex;">
+                <i class="fa-solid fa-calendar-days"
+                    style="background-color: orangered; color: white; border-radius: 50%;padding: 10px;"></i>
+                <span style="background-color: black; color: white; border-radius: 30px; padding: 5px;">Schdeule a
+                    Visit</span>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="banner_1">
+        <p class="banner_1_loc">Toranto,<span style="color: orangered;">Canada</span></p>
+        <h1>HURRY!<br>HURRY!<br>GET THE<br> BEST VILLA<br> FOR YOU</h1>
+    </div>
+
+    <div class="container featured">
+        <div class="row">
+            <div class="col-lg-4">
+                <div>
+                    <img src="./images/featured.jpg" alt="" height=480>
+                </div>
+                <div
+                    style="background-color: orangered; border-radius: 50%; width: 100px;height: 100px; position: relative; right: 50px;bottom: 50px;">
+                    <img src="./images/featured-icon.png" alt="featured-icon"
+                        style="position: absolute; top: 20px; left: 25px;">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <p style="color: orangered; font-weight: bold;">|FEATURED</p>
+                <h1 class="my-4">Best Appartment & Sea View</h1>
+                <div class="secondary">
+                    <p style="color: orangered;" class="fw-bold pt-3 ps-3">Best useful links?</p>
+                    <hr>
+                    <p class="p-3"> Get <b>the best villa</b> website template in HTML CSS and Bootstrap for your
+                        business.TemplateMo provides you the <span style="color: blue;">best free CSS templates</span>in
+                        the world.Please tell your friends about it.</p>
+                    <h5 class="ps-3">How does this work?</h5>
+                    <hr>
+                    <h5 class="ps-3 pb-3">Why is Villa Agency the best?</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-3 shadow-lg features">
+
+                <div class="row p-3">
+                    <div class="col-4">
+                        <img src="./images/info-icon-01.png" alt="info-icon-01" />
+                    </div>
+                    <div class="col-6">
+                        <h4>250 m <sup>2</sup></h4>
+                        <p>Total Flat Space</p>
+                    </div>
+                </div>
+
+                <div class="row p-3">
+                    <div class="col-4">
+                        <img src="./images/info-icon-02.png" alt="info-icon-02" />
+                    </div>
+                    <div class="col-6">
+                        <h4>Contract</h4>
+                        <p>Contract Ready</p>
+                    </div>
+                </div>
+
+                <div class="row p-3">
+                    <div class="col-4">
+                        <img src="./images/info-icon-03.png" alt="info-icon-03" />
+                    </div>
+                    <div class="col-6">
+                        <h4>Payment</h4>
+                        <p>Payment Process</p>
+                    </div>
+                </div>
+
+                <div class="row p-3">
+                    <div class="col-4">
+                        <img src="./images/info-icon-04.png" alt="info-icon-04" />
+                    </div>
+                    <div class="col-6">
+                        <h4>Safety</h4>
+                        <p>24/7 Under Control</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="video_view">
+        <p style="color: orangered; font-weight: bold; padding-top: 80px;">|VIDEO VIEW</p>
+        <h1 class="text-light fw-bold pb-5">Get Closer View <br>& Different <br>Feeling</h1>
+
+        <div style="position: relative;"><img src="./images/video-frame.jpg" alt="">
+            <div
+                style="background-color: white;border-radius: 50%; position: absolute; left: 730px; top: 250px; height: 50px; width: 50px;">
+                <i class="fa-solid fa-play" style="color: orangered; margin-top: 15px; font-size: 20px;"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col">
+                        34
+                    </div>
+                    <div class="col-6">
+                    Buildings Finished Now
+                    </div>
+                </div>
+                
+            </div>
+        </div>    
+    </div> -->
+
+    <div style="background-color: aliceblue ; padding-bottom: 100px;">
+        <div style="margin-top: 400px; margin-left: 80px; padding-top: 30px;">
+
+            <p style="color: orangered; font-weight: bold;">|BEST DEAL</p>
+            <div style="display: flex">
+                <div>
+                    <h1><b>Find Your Best <br> Deal Right Now!</b></h1>
+                </div>
+                <div style="margin-left: 500px;">
+                    <button class="btn text-light mx-3" style="background-color: orangered;">Appartment</button>
+                    <button class="btn btn-dark text-light mx-3">Villa House</button>
+
+                    <button class="btn btn-dark text-light mx-3">PentHouse</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-3 shadow-lg" style="border-radius: 20px;">
+                    <p class="text-secondary ps-3 pt-3">Total Flat &nbsp; &nbsp; &nbsp;<span
+                            style="font-size: 20px; color: black;"><b>Space 185 m <sup>2</sup></b></span></p>
+                    <hr>
+                    <p class="text-secondary ps-3 pt-3">Floor Number &nbsp; &nbsp; &nbsp;<span
+                            style="font-size: 20px; color: black;"><b>26 <sup>th</sup></b></span></p>
+                    <hr>
+                    <p class="text-secondary ps-3 pt-3">Number of rooms &nbsp; &nbsp; &nbsp;<span
+                            style="font-size: 20px; color: black;"><b>4</b></span></p>
+                    <hr>
+                    <p class="text-secondary ps-3 pt-3">Parking Availabe &nbsp; &nbsp; &nbsp;<span
+                            style="font-size: 20px; color: black;"><b>Yes</b></span></p>
+                    <hr>
+                    <p class="text-secondary ps-3 pt-3">Payment Process &nbsp; &nbsp; &nbsp;<span
+                            style="font-size: 20px; color: black;"><b>Bank</b></span></p>
+                </div>
+
+                <div class="col-5 ps-5">
+                    <img src="./images/deal-01.jpg" alt="" img-fluid>
+                </div>
+
+
+                <div class="col-4 px-5">
+                    <h4><b>Extra Info About Property</b></h4>
+                    <p class="py-3 text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus
+                        quam animi debitis reiciendis,
+                        obcaecati tempora molestias nam quo accusamus dicta facere quibusdam aliquam ipsum hic eos.
+                        Magni unde
+                        quibusdam at?</p>
+
+                    <p class="text-secondary">When you need free CSS templates, you can simply type TemplateMo in any
+                        search engine website.In addition , you can type TemplateMo Portfolio, TemplateMo One Page
+                        Layouts,etc</p>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div style="text-align: center; margin:50px 0;">
+        <p style="color: orangered; font-weight: bold;">|PROPERTIES</p>
+        <h1><b>We Provide The <br> Best Property <br> You Like</b></h1>
+    </div>
+
+    <div class="container property_cards">
+        <div class="row mb-5">
+            <div class="col-4">
+                <div class="card" style="width: 350px;background-color: aliceblue;">
+                    <img src="./images/property-01.jpg" alt="property-1">
+                    <div class="card-body">
+                        <h5>18 New Street Miami, OR 97219</h5>
+                        <p>Bedroom:8 &nbsp;&nbsp; Bathrooms:8&nbsp;&nbsp; Area:545m <sup>2</sup>&nbsp;&nbsp; Floor:3
+                            &nbsp;&nbsp;Parking:6 spots</p>
+
+                        <a href="#" class="btn btn-dark ms-5 ">Schedule a visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 350px;background-color: aliceblue;">
+                    <img src="./images/property-02.jpg" alt="property-2">
+                    <div class="card-body">
+                        <h5>18 New Street Miami, OR 97219</h5>
+                        <p>Bedroom:8 &nbsp;&nbsp; Bathrooms:8&nbsp;&nbsp; Area:545m <sup>2</sup>&nbsp;&nbsp; Floor:3
+                            &nbsp;&nbsp;Parking:6 spots</p>
+
+                        <a href="#" class="btn btn-dark ms-5">Schedule a visit</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card" style="width: 350px;background-color: aliceblue;">
+                    <img src="./images/property-03.jpg" alt="property-3">
+                    <div class="card-body">
+                        <h5>18 New Street Miami, OR 97219</h5>
+                        <p>Bedroom:8 &nbsp;&nbsp; Bathrooms:8&nbsp;&nbsp; Area:545m <sup>2</sup>&nbsp;&nbsp; Floor:3
+                            &nbsp;&nbsp;Parking:6 spots</p>
+
+                        <a href="#" class="btn btn-dark ms-5">Schedule a visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 350px;background-color: aliceblue;">
+                    <img src="./images/property-04.jpg" alt="property-4">
+                    <div class="card-body">
+                        <h5>18 New Street Miami, OR 97219</h5>
+                        <p>Bedroom:8 &nbsp;&nbsp; Bathrooms:8&nbsp;&nbsp; Area:545m <sup>2</sup>&nbsp;&nbsp; Floor:3
+                            &nbsp;&nbsp;Parking:6 spots</p>
+
+                        <a href="#" class="btn btn-dark ms-5">Schedule a visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 350px;background-color: aliceblue;">
+                    <img src="./images/property-05.jpg" alt="property-5">
+                    <div class="card-body">
+                        <h5>18 New Street Miami, OR 97219</h5>
+                        <p>Bedroom:8 &nbsp;&nbsp; Bathrooms:8&nbsp;&nbsp; Area:545m <sup>2</sup>&nbsp;&nbsp; Floor:3
+                            &nbsp;&nbsp;Parking:6 spots</p>
+
+                        <a href="#" class="btn btn-dark ms-5">Schedule a visit</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card" style="width: 350px;background-color: aliceblue;">
+                    <img src="./images/property-06.jpg" alt="property-6">
+                    <div class="card-body">
+                        <h5>18 New Street Miami, OR 97219</h5>
+                        <p>Bedroom:8 &nbsp;&nbsp; Bathrooms:8&nbsp;&nbsp; Area:545m <sup>2</sup>&nbsp;&nbsp; Floor:3
+                            &nbsp;&nbsp;Parking:6 spots</p>
+
+                        <a href="#" class="btn btn-dark ms-5">Schedule a visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="contact_us">
+
+        <p style="color: orangered; font-weight: bold; padding-top: 80px; text-align: center;">|CONTACT US</p>
+        <h1 class="text-light fw-bold pb-5 text-center">Get In Touch<br>With Our Agents</h1>
+        <div style="display: flex; margin-left: 250px;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15132.958961623684!2d73.8536568!3d18.5180653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1703238764305!5m2!1sen!2sin"
+                width="600" height="350" style="border:0;" allowfullscreen=""
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            
+            <form action="" method="post" class="bg-light mx-5 w-25">
+                <label for="">Full Name</label><br>
+                <input type="text" placeholder="Your Name..." class="form-control input_decor"><br>
+                <label for="">Email Address</label><br>
+                <input type="email" placeholder="Your Email..." class="form-control input_decor"><br>
+                <label for="">Subject</label><br>
+                <input type="text" placeholder="Subject.." class="form-control input_decor"><br>
+                <label for="">Message</label><br>
+                <textarea placeholder="Your Message..." class="form-control input_decor"></textarea><br>
+
+                <button class="send_msg">Send Message</button>
+
+            </form>
+
+        </div>
+
+        <div class="d-flex  contact_details" style="margin-left: 250px;">
+        <div class="d-flex p-3  me-3 shadow-lg contact_details_1">
+            <div class="px-3">
+                <img src="./images/phone-icon.png" alt="">
+            </div>
+            <div>
+                <h4>010-020-0340</h4>
+                <p>Phone Number</p>
+            </div>
+            
+        </div>
+    
+        <div class="d-flex p-3 shadow-lg contact_details_1">
+            <div class="px-3">
+                <img src="./images/email-icon.png" alt="">
+            </div>
+            <div>
+                <h4>info@villa.co</h4>
+                <p>Business Email</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    </div>
+
+    <div style="margin-top: 500px;">
+        <footer class="py-5 bg-dark text-light fw-bold" style="text-align: center; font-size: 20px;">
+            Copyright @2023 Design:Mrunali
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>
